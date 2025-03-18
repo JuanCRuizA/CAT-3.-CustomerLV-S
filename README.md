@@ -1,11 +1,14 @@
 # Customer Lifetime Value (CLV) Analysis and Customer Segmentation Project 
 
+## Current status
+This project is in development
+
 ## Overview 
 Machine learning project to analyse and estimate the Customer Lifetime Value (CLV) and propose Customer Segmentation using historical banking data from a Czech financial dataset. 
 
 This database is a Real anonymized Czech bank set of tables about transactions, account info, and loan records released for PKDD'99 Discovery Challenge. It was taken from this URL: https://data.world/lpetrocelli/czech-financial-dataset-real-anonymized-transactions. There, Liz Petrocelli acknowledged that this database was prepared by Petr Berka and Marta Sochorova and the original source is http://lisp.vse.cz/pkdd99/berka.htm. 
  
-There are 8 tables in the dataset, 4 central tables (it means they have a relationship to 2 to 5 tables) and 4 normal tables (they only have a relationship to 1 table).
+The database includes 8 primary tables with established foreign key relationships as shown in the ER diagram. There are 4 central tables (it means they have a relationship to 2 to 5 tables) and 4 normal tables (they only have a relationship to 1 table).
  
 These are the central tables: The first one is Account (4,500 records and related to 5 tables), their features are: ID, location of the branch (district_id), frequency of issuance of statements, and account’s date of creation (between Jan/1993 and Dec/1997). Another important table is Disposition (5.369 records and related to 3 tables), their features are: ID, identification of a customer (client_id) and an account (account_id) and the type or disposition (owner/user). Next key table is Client (5.369 records), their features are: ID, client’s birthday and sex and district of the client. Last central table is Demograph (77 records), their most important features are ID (A1), district name (A2), number of inhabitants (A4), average salary (A11) and no. of entrepreneurs per 1000 inhabitants (A14).
 

@@ -1,5 +1,16 @@
-# Object file
-*.o
+# Large data files
+data/*.csv
+!data/sample*.csv
 
-# Ada Library Information
-*.ali
+# Model files
+*.pkl
+*.h5
+*.joblib
+
+# Sensitive information
+*.env
+*config.ini
+*credentials*
+
+# Generated reports
+reports/figures/*
