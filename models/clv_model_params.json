@@ -1,0 +1,12 @@
+{
+    "metadata": {
+        "creation_date": "2025-03-27",
+        "prediction_time_days": 365,
+        "discount_rate": 0.15
+    },
+    "method": "simplified_ratio",
+    "simplified": {
+        "frequency_ratio": "365 / T",
+        "monetary_calculation": "average_transaction_value"
+    }
+}

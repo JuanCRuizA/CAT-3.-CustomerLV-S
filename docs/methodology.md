@@ -34,6 +34,7 @@ The CLV calculation follows these steps:
 3. Fit the Gamma-Gamma model to predict future transaction values
 4. Combine these predictions with a discount rate to calculate CLV
 
+
 ## Customer Segmentation
 
 ### Approach
@@ -51,6 +52,38 @@ Segmentation quality is assessed using:
 - Calinski-Harabasz index
 - Davies-Bouldin index
 - Business interpretability of segments
+
+### Segmentation Methodology
+Our clustering approach (implemented in `06_customer_segmentation.ipynb`) employs K-means clustering with careful feature selection and evaluation:
+
+### Feature Selection Process
+
+We selected features across five key banking dimensions:
+1. **RFM Features**: Recency, frequency, and monetary value metrics
+2. **Transaction Features**: Transaction amounts, volatility, patterns
+3. **Balance Features**: Average balance, balance range, volatility
+4. **Product Features**: Product diversity, loan usage, card adoption
+5. **CLV Features**: Forward-looking value predictions
+
+### Optimal Cluster Determination
+
+To identify the optimal number of clusters, we computed and evaluated four clustering quality metrics:
+- Within-Cluster Sum of Squares (Elbow method)
+- Silhouette Score
+- Calinski-Harabasz Index
+- Davies-Bouldin Index
+
+These metrics were normalized and combined into an aggregate score for each potential cluster count (2-10). While our analysis identified {X} clusters as mathematically optimal, we selected 5 clusters based on banking industry standard practices and interpretability.
+
+### Segment Naming Methodology
+
+We implemented an automatic naming system that creates banking-specific segment names combining:
+- **Value tier**: Premium, Standard, or Basic
+- **Activity level**: Active, Intermittent, Dormant, or Low-Activity
+- **Product focus**: Borrowers, Transactors, Automated Users, Savers, or Basic Users
+
+This naming convention creates intuitive, business-friendly segment labels like "Premium Active Borrowers" that immediately convey key characteristics.
+
 
 ## Churn Prediction
 
