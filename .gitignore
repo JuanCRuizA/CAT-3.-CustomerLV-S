@@ -1,6 +1,7 @@
 # Large data files
 data/*.csv
 !data/sample*.csv
+venv/
 
 # Model files
 *.pkl
